@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" minWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yashchitre.PrimaryController">
+<top>
+   <VBox spacing="5.0" BorderPane.alignment="CENTER">
+      <padding>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </padding>
+      <HBox spacing="25.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <Region HBox.hgrow="ALWAYS" />
+         <Button fx:id="mainViewButton" mnemonicParsing="false" onAction="#mainViewButtonClick" text="Main Page" />
+         <Button fx:id="savedViewButton" mnemonicParsing="false" onAction="#savedViewButtonClick" text="Saved Data" />
+         <Region HBox.hgrow="ALWAYS" />
+      </HBox>
+      <HBox fx:id="searchHBox" spacing="25.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <TextField fx:id="searchField" HBox.hgrow="ALWAYS" />
+         <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButtonClick" text="Search" />
+         <Region HBox.hgrow="ALWAYS" />
+         <Button fx:id="checkBoxActionButton" mnemonicParsing="false" onAction="#checkBoxActionButtonClick" text="Save Selected" />
+      </HBox>
+   </VBox>
+</top>
+<center>
+   <TableView fx:id="result" onMouseClicked="#resultItemClick" BorderPane.alignment="CENTER">
+      <columns>
+         <TableColumn fx:id="select" editable="false" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" resizable="false" sortable="false" style="-fx-alignment: CENTER;" text="Select" />
+         <TableColumn fx:id="content" editable="false" minWidth="-Infinity" resizable="false" text="Query Results" />
+      </columns>
+      <BorderPane.margin>
+         <Insets />
+      </BorderPane.margin>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
+      <padding>
+         <Insets left="2.0" right="2.0" />
+      </padding>
+   </TableView>
+</center>
+<bottom>
+   <Label text="Created by Yash Kiran Chitre" textAlignment="CENTER" BorderPane.alignment="CENTER">
+      <font>
+         <Font name="Calibri" size="12.0" />
+      </font>
+      <BorderPane.margin>
+         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </BorderPane.margin></Label>
+</bottom>
+</BorderPane>
+
