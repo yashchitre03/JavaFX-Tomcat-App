@@ -10,10 +10,10 @@ import java.io.IOException;
 @WebServlet(name = "/SavedServlet")
 public class SavedServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
-
+        System.out.println("POST");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
-
+        System.out.println("GET");
     }
 }
